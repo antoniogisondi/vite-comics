@@ -33,13 +33,13 @@ export default {
     <main>
         <div class="container">
             <div class="row">
-                <div class="col bg-black">
+                <div class="col">
                     <img src="../assets/img/jumbotron.jpg" alt="">
                 </div>
                 <div class="col bg-blue">
                     <ul class="nav">
                         <li class="nav-item" v-for="(item, index) in image_text">
-                            <img :src="item.image">
+                            <img :src="'../assets/img/item.image'">
                             <a class="nav-link" href="#">{{ item.text }}</a>
                         </li>
                     </ul>
@@ -51,14 +51,14 @@ export default {
 
 <style lang="scss" scoped>
 .row {
+    font-family: 'Roboto Condensed', sans-serif;
 
-    .bg-black {
+    .col {
         display: flex;
         justify-content: center;
-        background-color: black;
 
         img {
-            max-width: 70%;
+            width: 100%;
         }
     }
 
@@ -74,16 +74,18 @@ export default {
             flex-direction: row;
 
             .nav-item {
+                display: flex;
+                flex-direction: row;
                 padding: 20px;
             }
 
-            .nav-item img {
-                max-width: 20%;
-            }
+            // .nav-item img {
+            //     max-width: 20%;
+            // }
 
             .nav-link {
                 color: white;
-                font-size: 13px;
+                font-size: 15px;
                 text-decoration: none;
             }
         }

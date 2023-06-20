@@ -29,39 +29,44 @@ export default {
 
 <style lang="scss" scoped>
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
 }
 
 .row {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 
-    ul {
-        justify-content: flex-end;
-        align-items: center;
-        list-style-type: none;
+    .col {
+        ul {
+            list-style-type: none;
 
-        li {
-            display: inline-block;
-            margin: 20px;
+            li {
+                display: inline-block;
+                margin: 20px;
 
-            a {
-                font-size: 13px;
-                text-decoration: none;
-                color: rgba(74, 72, 71, 255);
+                a {
+                    font-size: 15px;
+                    text-decoration: none;
+                    color: rgba(74, 72, 71, 255);
+
+                    &:hover {
+                        color: rgba(2, 130, 249, 255);
+                    }
+                }
             }
         }
     }
+}
 
-    .col {
-        display: flex;
-        align-items: center;
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        img {
-            max-width: 65%;
-        }
+    img {
+        max-width: 65%;
     }
 }
 </style>

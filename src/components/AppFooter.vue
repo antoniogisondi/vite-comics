@@ -86,30 +86,33 @@ export default {
 
 <style lang="scss" scoped>
 footer {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url(../assets/img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
     .bg-image {
-        background-image: url(../assets/img/footer-bg.jpg);
-        position: relative;
-        background-repeat: no-repeat;
-        background-size: cover;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        align-items: flex-end;
 
         .container-col {
             display: flex;
             flex-direction: row;
-        }
 
-        .col ul {
-            list-style-type: none;
-            color: white;
-        }
+            h3 {
+                color: white;
+                margin: 10px 0;
+                font-size: 20px;
+            }
 
-        .col-bg {
-            z-index: 1;
-            top: 0;
-            left: 50%;
-
+            .col li {
+                list-style-type: none;
+                color: rgba(111, 111, 111, 255);
+                font-size: 15px;
+                padding: 3px 0;
+            }
         }
     }
 
