@@ -1,6 +1,6 @@
 <script>
 export default {
-    
+
 }
 </script>
 
@@ -14,7 +14,7 @@ export default {
                 <div class="col">
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Active</a>
+                            <a class="nav-link active" href="#">Active</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
@@ -23,7 +23,7 @@ export default {
                             <a class="nav-link" href="#">Link</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
+                            <a class="nav-link" href="#">Disabled</a>
                         </li>
                     </ul>
                 </div>
