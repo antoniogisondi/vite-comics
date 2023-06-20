@@ -7,7 +7,7 @@ export default {
 <template lang="">
     <footer>
         <div class="container">
-            <div class="row d-flex flex-row">
+            <div class="row bg-image">
                 <div class="col">
                     <ul>
                         <li>
@@ -64,12 +64,12 @@ export default {
                 </div>
             </div>
             
-            <div class="row d-flex flex-row">
+            <div class="row footer">
                 <div class="col">
                  <button>SIGN-UP NOW!</button>
                 </div>
 
-                <div class="col">
+                <div class="col-2">
                  <h2>FOLLOW US</h2>
                  <img src="../assets/img/footer-facebook.png" alt="">
                  <img src="../assets/img/footer-periscope.png" alt="">
@@ -82,6 +82,30 @@ export default {
     </footer>
 </template>
 
-<style lang="">
-    
+<style lang="scss" scoped>
+footer {
+    .bg-image {
+        background-image: url(../assets/img/footer-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+
+        .col ul {
+            list-style-type: none;
+        }
+    }
+
+    .footer {
+        background-color: rgba(48, 48, 48, 255);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .col-2 {
+            display: inline-flex;
+
+        }
+    }
+}
 </style>
