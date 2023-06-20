@@ -7,9 +7,26 @@ export default {
 <template lang="">
     <header>
         <div class="container">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col"></div>
+            <div class="row d-flex flex-row">
+                <div class="col">
+                    <img src="../assets/img/dc-logo.png" alt="">
+                </div>
+                <div class="col">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
