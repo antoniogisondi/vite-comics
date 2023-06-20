@@ -2,9 +2,7 @@
 export default {
     data() {
         return {
-            navbar_item: [
-
-            ]
+            navbar_item: ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLE', 'VIDEOS', 'FANS', 'NEWS', 'SHOP']
         }
     }
 }
@@ -19,35 +17,8 @@ export default {
                 </div>
                 <div class="col">
                     <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">CHARACTERS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">COMICS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">MOVIES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">TV</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">GAMES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">COLLECTIBLE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">VIDEOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">FANS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">NEWS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">SHOP</a>
+                        <li class="nav-item" v-for="(item, index) in navbar_item">
+                            <a class="nav-link" href="#">{{ item }}</a>
                         </li>
                     </ul>
                 </div>
@@ -60,21 +31,37 @@ export default {
 header {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-}
 
-ul {
-    justify-content: flex-end;
-    align-items: center;
-    list-style-type: none;
+    ul {
+        justify-content: flex-end;
+        align-items: center;
+        list-style-type: none;
 
-    li {
-        display: inline-block;
-        margin: 20px;
+        li {
+            display: inline-block;
+            margin: 20px;
+
+            a {
+                font-size: 13px;
+                text-decoration: none;
+                color: rgba(74, 72, 71, 255);
+            }
+        }
+    }
+
+    .col {
+        display: flex;
+        align-items: center;
+
+        img {
+            max-width: 65%;
+        }
     }
 }
 </style>

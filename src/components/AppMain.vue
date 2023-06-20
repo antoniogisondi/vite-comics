@@ -1,6 +1,31 @@
 <script>
 export default {
-
+    data() {
+        return {
+            image_text: [
+                {
+                    image: '../assets/img/buy-comics-digital-comics.png',
+                    text: 'DIGITAL COMICS'
+                },
+                {
+                    image: '../assets/img/buy-comics-merchandise.png',
+                    text: 'DC MERCHANDISE'
+                },
+                {
+                    image: '../assets/img/buy-comics-subscriptions.png',
+                    text: 'SUBSCRIPTIONS'
+                },
+                {
+                    image: '../assets/img/buy-comics-shop-locator.png',
+                    text: 'SHOP LOCATOR'
+                },
+                {
+                    image: '../assets/img/buy-dc-power-visa.svg',
+                    text: 'DC POWER VISA'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -9,29 +34,13 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col bg-black">
-                    <h1> --Content goes here-- </h1>
+                    <img src="../assets/img/jumbotron.jpg" alt="">
                 </div>
                 <div class="col bg-blue">
                     <ul class="nav">
-                        <li class="nav-item-big">
-                            <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                            <a class="nav-link" href="#">DIGITAL COMICS</a>
-                        </li>
-                        <li class="nav-item">
-                            <img src="../assets/img/buy-comics-merchandise.png" alt="">
-                            <a class="nav-link" href="#">COMICS</a>
-                        </li>
-                        <li class="nav-item">
-                            <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-                            <a class="nav-link" href="#">MOVIES</a>
-                        </li>
-                        <li class="nav-item">
-                            <img src="../assets/img/buy-comics-shop-locator.png" alt="">
-                            <a class="nav-link" href="#">TV</a>
-                        </li>
-                        <li class="nav-item-svg">
-                            <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-                            <a class="nav-link" href="#">GAMES</a>
+                        <li class="nav-item" v-for="(item, index) in image_text">
+                            <img :src="item.image">
+                            <a class="nav-link" href="#">{{ item.text }}</a>
                         </li>
                     </ul>
                 </div>
@@ -44,10 +53,12 @@ export default {
 .row {
 
     .bg-black {
+        display: flex;
+        justify-content: center;
         background-color: black;
 
-        h1 {
-            color: white;
+        img {
+            max-width: 70%;
         }
     }
 
@@ -55,19 +66,25 @@ export default {
         display: flex;
         justify-content: center;
         background-color: rgba(2, 130, 249, 255);
-        padding: 50px;
+        width: 100%;
 
         .nav {
             list-style-type: none;
             display: flex;
             flex-direction: row;
 
-            .nav-item img {
-                max-width: 30%;
+            .nav-item {
+                padding: 20px;
             }
 
-            .nav-item-big img {
+            .nav-item img {
                 max-width: 20%;
+            }
+
+            .nav-link {
+                color: white;
+                font-size: 13px;
+                text-decoration: none;
             }
         }
     }
