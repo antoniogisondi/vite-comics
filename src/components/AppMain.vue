@@ -33,61 +33,61 @@ export default {
                 {
                     thumb: "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
                     price: "$19.99",
-                    series: "Action Comics",
+                    series: "ACTION COMICS",
                     type: 'Comic Book'
                 },
                 {
                     thumb: "https://www.panini.it/media/catalog/product/cache/a5b5dd3adfe0d321084804c738f29601/M/1/M1BLLA015ISBN_0.jpg",
                     price: "$3.99",
-                    series: "American Vampire 1976",
+                    series: "AMERICAN VAMPIRE 1976",
                     type: 'Comic Book'
                 },
                 {
                     thumb: "https://media.wired.com/photos/593384dad80dd005b42b2817/master/w_2560%2Cc_limit/Aquaman-16.jpg",
                     price: "$16.99",
-                    series: "Aquaman",
+                    series: "AQUAMAN",
                     type: 'Graphic Novel'
                 },
                 {
                     thumb: "https://d29xot63vimef3.cloudfront.net/image/batgirl/1-1.jpg",
                     price: "$2.99",
-                    series: "Batgirl",
+                    series: "BATGIRL",
                     type: 'Comic Book'
                 },
                 {
                     thumb: "https://static.posters.cz/image/750/locandine-film-in-plexiglass-batman-prowl-comic-cover-i69653.jpg",
                     price: "$3.99",
-                    series: "Batman",
+                    series: "BATMAN",
                     type: 'Comic Book'
                 },
                 {
                     thumb: "https://static.wikia.nocookie.net/marvel_dc/images/5/50/Batman_Beyond_v.1_1.jpg",
                     price: "$2.99",
-                    series: "Batman Beyond",
+                    series: "BATMAN BEYOND",
                     type: 'Comic Book'
                 },
                 {
                     thumb: "https://static.wikia.nocookie.net/marvel_dc/images/0/0d/Batman_Superman_Vol_1_1.jpg",
                     price: "$3.99",
-                    series: "Batman/Superman",
+                    series: "BATMAN/SUPERMAN",
                     type: 'Comic Book'
                 },
                 {
                     thumb: "https://static.wikia.nocookie.net/marvel_dc/images/c/cf/Batman_Superman_Annual_Vol_2_1.jpg",
                     price: "$4.99",
-                    series: 'Batman/Superman Annual',
+                    series: 'BATMAN/SUPERMAN ANNUAL',
                     type: 'Comic Book'
                 },
                 {
                     thumb: "https://static.wikia.nocookie.net/marvel_dc/images/5/54/Batman_The_Joker_War_Zone_Vol_1_1.jpg",
                     price: "$5.99",
-                    series: "Batman: The Joker War Zone",
+                    series: "BATMAN: THE JOKER WAR ZONE",
                     type: 'Comic Book'
                 },
                 {
                     thumb: "https://static.wikia.nocookie.net/marvel_dc/images/6/64/Batman_Three_Jokers_Collected.jpg",
                     price: "$6.99",
-                    series: "Batman: Three Jokers",
+                    series: "BATMAN: THREE JOKERS",
                     type: 'Comic Book'
                 },
                 {
@@ -99,7 +99,7 @@ export default {
                 {
                     thumb: "https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg",
                     price: "$16.99",
-                    series: "Catwoman",
+                    series: "CATWOMAN",
                     type: 'Graphic Novel'
                 }
             ]
@@ -116,13 +116,23 @@ export default {
                     <img src="../assets/img/jumbotron.jpg" alt="">
                 </div>
 
-                <div class="col d-flex flex-row flex-wrap width">
-                    <AppComicBook v-for="(item, index) in comic_book" :key="index"
-                        :img="item.thumb"
-                        :series="item.series"
-                        :type="item.type"
-                        :price="item.price"
-                    />
+                <div class="col bg-color">
+                    <div class="d-flex flex-row flex-wrap width mt-5">
+                        <AppComicBook v-for="(item, index) in comic_book" :key="index"
+                            :img="item.thumb"
+                            :series="item.series"
+                            :type="item.type"
+                            :price="item.price"
+                        />
+                    </div>
+
+                    <div class="button d-flex justify-content-center pb-3 pt-5">
+                        <button>LOAD MORE</button>
+                    </div>
+
+                    <div class="badge">
+                        <span>CURRENT SERIES</span>
+                    </div>
                 </div>
 
                 <div class="col bg-blue d-flex justify-content-center">
@@ -166,9 +176,36 @@ export default {
     }
 }
 
+.bg-color {
+    position: relative;
+    background-color: rgba(28, 28, 28, 255);
 
-.width {
-    width: calc(100% / 1.2);
-    margin: 0 auto;
+    .width {
+        width: calc(100% / 1.2);
+        margin: 0 auto;
+    }
+
+    .button {
+        button {
+            color: white;
+            background-color: rgba(2, 130, 249, 255);
+            border: none;
+            padding: 5px 60px;
+        }
+    }
+
+    .badge {
+        left: 9.5%;
+        top: -2%;
+        position: absolute;
+
+        span {
+            color: white;
+            font-size: 20px;
+            background-color: rgba(2, 130, 249, 255);
+            border: none;
+            padding: 10px 25px;
+        }
+    }
 }
 </style>

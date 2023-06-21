@@ -52,13 +52,13 @@ export default {
 <template lang="">
     <header>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col d-flex justify-content-start m-3">
+            <div class="row d-flex flex row m-3">
+                <div class="col-3 d-flex justify-content-center">
                     <img src="../assets/img/dc-logo.png" alt="">
                 </div>
-                <div class="col d-flex justify-content-start">
+                <div class="col-9 d-flex justify-content-end align-items-center">
                     <ul>
-                        <li class="m-2 p-0" v-for="(item, index) in navbar_item">
+                        <li class="m-4" v-for="(item, index) in navbar_item">
                             <a href="#">{{ item.text }}</a>
                         </li>
                     </ul>
@@ -92,14 +92,7 @@ ul {
     }
 }
 
-
-.col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-        max-width: 65%;
-    }
+img {
+    width: 25%;
 }
 </style>

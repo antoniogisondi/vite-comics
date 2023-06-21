@@ -14,9 +14,9 @@ export default {
 <template lang="">
     <footer>
         <div class="container-fluid bg-image">
-            <div class="row d-flex justify-content-between bg-image-2">
-                <div class="container d-flex">
-                    <div class="col">
+            <div class="row bg-image-2">
+                <div class="container d-flex gx-5">
+                    <div class="col-2">
                         <ul>
                             <li>
                                 <h3>DC COMICS</h3>
@@ -32,7 +32,7 @@ export default {
                         </ul>
                     </div>
     
-                    <div class="col">
+                    <div class="col-2">
                         <ul>
                             <li>
                                 <h3>DC</h3>
@@ -41,7 +41,7 @@ export default {
                         </ul>
                     </div>
     
-                    <div class="col">
+                    <div class="col-2">
                         <ul>
                             <li>
                                 <h3>SITES</h3>
@@ -53,11 +53,11 @@ export default {
             </div>
             
             <div class="row d-flex flex-row justify-content-around align-items-center bg-color">
-                <div class="col p-4">
+                <div class="col m-5">
                  <button>SIGN-UP NOW!</button>
                 </div>
 
-                <div class="col d-flex flex-row justify-content-end align-items-center image p-3">
+                <div class="col d-flex flex-row justify-content-end align-items-center image m-4">
                     <h3>FOLLOW US</h3>
                     <a href="#">
                         <img src="../assets/img/footer-facebook.png" alt=""> 
