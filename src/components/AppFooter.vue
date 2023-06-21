@@ -57,7 +57,7 @@ export default {
                  <button>SIGN-UP NOW!</button>
                 </div>
 
-                <div class="col d-flex justify-content-center align-items-center image">
+                <div class="col d-flex justify-content-start align-items-center image">
                     <h3>FOLLOW US</h3>
                     <div class="link">
                         <a href="#">
