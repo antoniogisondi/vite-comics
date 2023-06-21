@@ -50,13 +50,9 @@ export default {
                         </ul>
                     </div>
                 </div>
-
-                <div class="col-bg">
-                    <img src="../assets/img/dc-logo-bg.png" alt="">
-                </div>
             </div>
             
-            <div class="row footer">
+            <div class="row-footer">
                 <div class="col">
                  <button>SIGN-UP NOW!</button>
                 </div>
@@ -87,36 +83,43 @@ export default {
 <style lang="scss" scoped>
 footer {
     font-family: 'Roboto Condensed', sans-serif;
-    background-image: url(../assets/img/footer-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    .row {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-end;
 
-        .container-col {
+    .container {
+        background-image: url(../assets/img/footer-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .row {
             display: flex;
-            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1170px;
+            background-image: url('../assets/img/dc-logo-bg.png');
+            background-size: 500px;
+            background-repeat: no-repeat;
+            background-position: right;
 
-            h3 {
-                color: white;
-                margin: 10px 0;
-                font-size: 20px;
-            }
+            .container-col {
+                display: flex;
 
-            .col li {
-                list-style-type: none;
-                color: rgba(111, 111, 111, 255);
-                font-size: 15px;
-                padding: 3px 0;
+                h3 {
+                    color: white;
+                    margin: 10px 0;
+                    font-size: 20px;
+                }
+
+                .col li {
+                    list-style-type: none;
+                    color: rgba(111, 111, 111, 255);
+                    font-size: 15px;
+                    padding: 3px 0;
+                }
             }
         }
     }
 
-    .footer {
+
+    .row-footer {
         background-color: rgba(48, 48, 48, 255);
         display: flex;
         flex-direction: row;

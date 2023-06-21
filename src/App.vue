@@ -19,4 +19,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use './styles/generals.sass' as *;
+@use './styles/partials/variables'
+</style>
