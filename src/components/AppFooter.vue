@@ -14,7 +14,7 @@ export default {
 <template lang="">
     <footer>
         <div class="container">
-            <div class="row bg-image">
+            <div class="row bg-img">
                 <div class="container-col">
                     <div class="col">
                         <ul>
@@ -52,7 +52,7 @@ export default {
                 </div>
 
                 <div class="col-bg">
-                    <img src="../assets/img/dc-logo-bg.png" alt="">
+                    
                 </div>
             </div>
             
@@ -91,7 +91,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
 
-    .bg-image {
+    .row {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -113,7 +113,14 @@ footer {
                 font-size: 15px;
                 padding: 3px 0;
             }
+
+            .bg-img {
+                background-image: url(../assets/img/dc-logo-bg.png);
+                background-repeat: no-repeat;
+                background-position: right top 50%;
+            }
         }
+
     }
 
     .footer {

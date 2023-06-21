@@ -2,30 +2,30 @@
 export default {
     data() {
         return {
-            image_text: [
+            list: [
                 {
-                    image: '../assets/img/buy-comics-digital-comics.png',
+                    img: './src/assets/img/buy-comics-digital-comics.png',
                     text: 'DIGITAL COMICS'
                 },
                 {
-                    image: '../assets/img/buy-comics-merchandise.png',
+                    img: './src/assets/img/buy-comics-merchandise.png',
                     text: 'DC MERCHANDISE'
                 },
                 {
-                    image: '../assets/img/buy-comics-subscriptions.png',
-                    text: 'SUBSCRIPTIONS'
+                    img: './src/assets/img/buy-comics-subscriptions.png',
+                    text: 'SUBSCRIPTION'
                 },
                 {
-                    image: '../assets/img/buy-comics-shop-locator.png',
-                    text: 'SHOP LOCATOR'
+                    img: './src/assets/img/buy-comics-shop-locator.png',
+                    text: 'COMIC SHOP LOCATOR'
                 },
                 {
-                    image: '../assets/img/buy-dc-power-visa.svg',
+                    img: './src/assets/img/buy-dc-power-visa.svg',
                     text: 'DC POWER VISA'
                 }
             ]
         }
-    }
+    },
 }
 </script>
 
@@ -38,8 +38,8 @@ export default {
                 </div>
                 <div class="col bg-blue">
                     <ul class="nav">
-                        <li class="nav-item" v-for="(item, index) in image_text">
-                            <img :src="'../assets/img/item.image'">
+                        <li class="nav-item" v-for="(item, index) in list" :key="index">
+                            <img :src="item.img">
                             <a class="nav-link" href="#">{{ item.text }}</a>
                         </li>
                     </ul>
@@ -76,17 +76,22 @@ export default {
             .nav-item {
                 display: flex;
                 flex-direction: row;
-                padding: 20px;
-            }
+                align-items: center;
+                padding: 35px;
 
-            // .nav-item img {
-            //     max-width: 20%;
-            // }
+                img {
+                    width: 50px;
+                    align-self: center;
+                }
+
+            }
 
             .nav-link {
                 color: white;
                 font-size: 15px;
                 text-decoration: none;
+                margin-left: 15px;
+
             }
         }
     }

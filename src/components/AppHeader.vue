@@ -2,7 +2,48 @@
 export default {
     data() {
         return {
-            navbar_item: ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLE', 'VIDEOS', 'FANS', 'NEWS', 'SHOP']
+            navbar_item: [
+                {
+                    text: 'CHARACTERS',
+                    active: true
+                },
+                {
+                    text: 'COMICS',
+                    active: true
+                },
+                {
+                    text: 'MOVIES',
+                    active: true
+                },
+                {
+                    text: 'TV',
+                    active: true
+                },
+                {
+                    text: 'GAMES',
+                    active: true
+                },
+                {
+                    text: 'COLLECTIBLE',
+                    active: true
+                },
+                {
+                    text: 'VIDEOS',
+                    active: true
+                },
+                {
+                    text: 'FANS',
+                    active: true
+                },
+                {
+                    text: 'NEWS',
+                    active: true
+                },
+                {
+                    text: 'SHOP',
+                    active: true
+                }
+            ]
         }
     }
 }
@@ -16,9 +57,9 @@ export default {
                     <img src="../assets/img/dc-logo.png" alt="">
                 </div>
                 <div class="col">
-                    <ul class="nav">
-                        <li class="nav-item" v-for="(item, index) in navbar_item">
-                            <a class="nav-link" href="#">{{ item }}</a>
+                    <ul>
+                        <li v-for="(item, index) in navbar_item">
+                            <a href="#">{{ item.text }}</a>
                         </li>
                     </ul>
                 </div>
