@@ -1,5 +1,5 @@
 <script>
-import AppComicBook from 'AppComicBook.vue';
+import AppComicBook from './AppComicBook.vue';
 export default {
     components: {
         AppComicBook
@@ -93,7 +93,7 @@ export default {
                 {
                     thumb: "https://static.wikia.nocookie.net/marvel_dc/images/f/f8/Batman_White_Knight_Presents_Harley_Quinn_Vol_1_1.jpg",
                     price: "$4.99",
-                    series: "Batman: White Knight Presents: Harley Quinn",
+                    series: "Batman: White Knight ",
                     type: 'Comic Book'
                 },
                 {
@@ -110,21 +110,26 @@ export default {
 
 <template lang="">
     <main>
-        <div class="container">
-            <div class="row">
-                <div class="col">
+        <div class="container-fluid">
+            <div class="row d-flex flex-column">
+                <div class="col bg-image">
                     <img src="../assets/img/jumbotron.jpg" alt="">
                 </div>
 
-                <div class="col">
-
+                <div class="col d-flex flex-row flex-wrap width">
+                    <AppComicBook v-for="(item, index) in comic_book" :key="index"
+                        :img="item.thumb"
+                        :series="item.series"
+                        :type="item.type"
+                        :price="item.price"
+                    />
                 </div>
 
-                <div class="col bg-blue">
-                    <ul class="nav">
-                        <li class="nav-item" v-for="(item, index) in list" :key="index">
+                <div class="col bg-blue d-flex justify-content-center">
+                    <ul class="nav d-flex flex-row p-2">
+                        <li class="nav-item d-flex flex-row align-items-center m-4" v-for="(item, index) in list" :key="index">
                             <img :src="item.img">
-                            <a class="nav-link" href="#">{{ item.text }}</a>
+                            <a class="nav-link text" href="#">{{ item.text }}</a>
                         </li>
                     </ul>
                 </div>
@@ -134,50 +139,36 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.row {
-    font-family: 'Roboto Condensed', sans-serif;
+.bg-image {
+    img {
+        width: 100%;
+    }
+}
 
-    .col {
-        display: flex;
-        justify-content: center;
+.bg-blue {
+    background-color: rgba(2, 130, 249, 255);
+    width: 100%;
+
+    .nav {
+        list-style-type: none;
 
         img {
-            width: 100%;
+            width: 40px;
         }
+
     }
 
-    .bg-blue {
-        display: flex;
-        justify-content: center;
-        background-color: rgba(2, 130, 249, 255);
-        width: 100%;
+    .text {
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
 
-        .nav {
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-
-            .nav-item {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                padding: 35px;
-
-                img {
-                    width: 50px;
-                    align-self: center;
-                }
-
-            }
-
-            .nav-link {
-                color: white;
-                font-size: 15px;
-                text-decoration: none;
-                margin-left: 15px;
-
-            }
-        }
     }
+}
+
+
+.width {
+    width: calc(100% / 1.2);
+    margin: 0 auto;
 }
 </style>

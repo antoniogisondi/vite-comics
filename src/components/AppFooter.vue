@@ -13,9 +13,9 @@ export default {
 
 <template lang="">
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="container-col">
+        <div class="container-fluid bg-image">
+            <div class="row d-flex justify-content-between bg-image-2">
+                <div class="container d-flex">
                     <div class="col">
                         <ul>
                             <li>
@@ -52,12 +52,12 @@ export default {
                 </div>
             </div>
             
-            <div class="row-footer">
-                <div class="col">
+            <div class="row d-flex flex-row justify-content-around align-items-center bg-color">
+                <div class="col p-4">
                  <button>SIGN-UP NOW!</button>
                 </div>
 
-                <div class="col-2">
+                <div class="col d-flex flex-row justify-content-end align-items-center image p-3">
                     <h3>FOLLOW US</h3>
                     <a href="#">
                         <img src="../assets/img/footer-facebook.png" alt=""> 
@@ -81,77 +81,58 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-footer {
-    font-family: 'Roboto Condensed', sans-serif;
+.bg-image {
+    background-image: url(../assets/img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
-
-    .container {
-        background-image: url(../assets/img/footer-bg.jpg);
+    .bg-image-2 {
+        max-width: 1170px;
+        background-image: url('../assets/img/dc-logo-bg.png');
+        background-size: 500px;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-position: right;
 
-        .row {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1170px;
-            background-image: url('../assets/img/dc-logo-bg.png');
-            background-size: 500px;
-            background-repeat: no-repeat;
-            background-position: right;
+        h3 {
+            color: white;
+            font-size: 20px;
+        }
 
-            .container-col {
-                display: flex;
-
-                h3 {
-                    color: white;
-                    margin: 10px 0;
-                    font-size: 20px;
-                }
-
-                .col li {
-                    list-style-type: none;
-                    color: rgba(111, 111, 111, 255);
-                    font-size: 15px;
-                    padding: 3px 0;
-                }
-            }
+        li {
+            list-style-type: none;
+            color: rgba(111, 111, 111, 255);
+            font-size: 15px;
         }
     }
+}
 
 
-    .row-footer {
-        background-color: rgba(48, 48, 48, 255);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
 
-        .col button {
-            background-color: transparent;
-            border-color: rgba(10, 114, 212, 255);
-            padding: 10px;
-            font-size: 15px;
-            font-weight: 700;
-            color: white;
+.bg-color {
+    background-color: rgba(48, 48, 48, 255);
 
-        }
+    .col button {
+        background-color: transparent;
+        border-color: rgba(10, 114, 212, 255);
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 700;
+        color: white;
 
-        .col-2 {
-            display: inline-flex;
-            justify-content: center;
-            padding: 20px 0 15px;
+    }
 
-            h3 {
-                color: rgba(2, 130, 249, 255);
-                padding: 0 20px 15px;
-            }
+    h3 {
+        color: rgba(2, 130, 249, 255);
+        padding: 0 20px 15px;
+        align-self: center;
+    }
 
+    image {
+        a {
             img {
                 width: 30px;
                 height: 30px;
-                padding: 15px 5px;
             }
-
         }
     }
 }

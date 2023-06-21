@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="m-4">
         <img :src="img">
         <h2>{{ series }}</h2>
         <h3>{{ type }}</h3>
@@ -18,6 +18,15 @@ export default {
     </div>
 </template>
 
-<style lang="">
-    
+<style lang="scss" scoped>
+img {
+    width: 170px;
+    height: 200px
+}
+
+h2,
+h3,
+h4 {
+    font-size: 15px;
+}
 </style>
