@@ -15,7 +15,7 @@ export default {
     <footer>
         <div class="container-fluid bg-image">
             <div class="row bg-image-2">
-                <div class="container d-flex gx-5">
+                <div class="container d-flex justify-content-center m-4">
                     <div class="col-2">
                         <ul>
                             <li>
@@ -52,28 +52,30 @@ export default {
                 </div>
             </div>
             
-            <div class="row d-flex flex-row justify-content-around align-items-center bg-color">
-                <div class="col m-5">
+            <div class="row d-flex flex-row bg-color">
+                <div class="col m-5 d-flex justify-content-center">
                  <button>SIGN-UP NOW!</button>
                 </div>
 
-                <div class="col d-flex flex-row justify-content-end align-items-center image m-4">
+                <div class="col d-flex justify-content-center align-items-center image">
                     <h3>FOLLOW US</h3>
-                    <a href="#">
-                        <img src="../assets/img/footer-facebook.png" alt=""> 
-                    </a>
-                    <a href="#">
-                        <img src="../assets/img/footer-periscope.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="../assets/img/footer-pinterest.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="../assets/img/footer-twitter.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="../assets/img/footer-youtube.png" alt="">
-                    </a>
+                    <div class="link">
+                        <a href="#">
+                            <img src="../assets/img/footer-facebook.png" alt=""> 
+                        </a>
+                        <a href="#">
+                            <img src="../assets/img/footer-periscope.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../assets/img/footer-pinterest.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../assets/img/footer-twitter.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../assets/img/footer-youtube.png" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,12 +98,14 @@ export default {
         h3 {
             color: white;
             font-size: 20px;
+            margin: 0;
         }
 
         li {
             list-style-type: none;
             color: rgba(111, 111, 111, 255);
             font-size: 15px;
+
         }
     }
 }
@@ -123,15 +127,15 @@ export default {
 
     h3 {
         color: rgba(2, 130, 249, 255);
-        padding: 0 20px 15px;
-        align-self: center;
+        padding: 20px;
     }
 
-    image {
+    .link {
         a {
             img {
-                width: 30px;
-                height: 30px;
+                width: 50px;
+                height: 50px;
+                padding: 10px;
             }
         }
     }

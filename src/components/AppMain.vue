@@ -181,7 +181,7 @@ export default {
     background-color: rgba(28, 28, 28, 255);
 
     .width {
-        width: calc(100% / 1.2);
+        width: calc(100% / 1.3);
         margin: 0 auto;
     }
 
@@ -195,7 +195,7 @@ export default {
     }
 
     .badge {
-        left: 9.5%;
+        left: 12.5%;
         top: -2%;
         position: absolute;
 

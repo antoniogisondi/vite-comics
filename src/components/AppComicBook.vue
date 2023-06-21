@@ -12,7 +12,7 @@ export default {
 <template>
     <div class="m-3">
         <img :src="img">
-        <h2 class="d-flex flex-wrap">{{ series }}</h2>
+        <h2>{{ series }}</h2>
         <h3>{{ type }}</h3>
         <h4>{{ price }}</h4>
     </div>
