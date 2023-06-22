@@ -15,7 +15,7 @@ export default {
     <footer>
         <div class="container-fluid bg-image">
             <div class="row bg-image-2">
-                <div class="container d-flex justify-content-center m-4">
+                <div class="container-col d-flex justify-content-center m-4">
                     <div class="col-2">
                         <ul>
                             <li>
@@ -52,12 +52,12 @@ export default {
                 </div>
             </div>
             
-            <div class="row d-flex flex-row bg-color">
+            <div class="row row-col-3 d-flex flex-row justify-content-around bg-color">
                 <div class="col m-5 d-flex justify-content-center">
                  <button>SIGN-UP NOW!</button>
                 </div>
 
-                <div class="col d-flex justify-content-start align-items-center image">
+                <div class="col d-flex justify-content-center align-items-center">
                     <h3>FOLLOW US</h3>
                     <div class="link">
                         <a href="#">
@@ -94,6 +94,8 @@ export default {
         background-size: 500px;
         background-repeat: no-repeat;
         background-position: right;
+        padding: 40px 0;
+        padding-bottom: 60px;
 
         h3 {
             color: white;

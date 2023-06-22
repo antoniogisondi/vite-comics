@@ -5,43 +5,43 @@ export default {
             navbar_item: [
                 {
                     text: 'CHARACTERS',
-                    active: true
+                    active: false
                 },
                 {
                     text: 'COMICS',
-                    active: true
+                    active: false
                 },
                 {
                     text: 'MOVIES',
-                    active: true
+                    active: false
                 },
                 {
                     text: 'TV',
-                    active: true
+                    active: false
                 },
                 {
                     text: 'GAMES',
-                    active: true
+                    active: false
                 },
                 {
                     text: 'COLLECTIBLE',
-                    active: true
+                    active: false
                 },
                 {
                     text: 'VIDEOS',
-                    active: true
+                    active: false
                 },
                 {
                     text: 'FANS',
-                    active: true
+                    active: false
                 },
                 {
                     text: 'NEWS',
-                    active: true
+                    active: false
                 },
                 {
                     text: 'SHOP',
-                    active: true
+                    active: false
                 }
             ]
         }
@@ -58,7 +58,7 @@ export default {
                 </div>
                 <div class="col-9 d-flex justify-content-end align-items-center">
                     <ul>
-                        <li class="m-4" v-for="(item, index) in navbar_item">
+                        <li class="m-4 active" v-for="(item, index) in navbar_item" :class="item.active ? 'active' : '' " :key="index">
                             <a href="#">{{ item.text }}</a>
                         </li>
                     </ul>
@@ -69,6 +69,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.active:hover {
+    border-bottom: 4px solid rgba(2, 130, 249, 255);
+
+}
+
 header {
     font-weight: 700;
 }
