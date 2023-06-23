@@ -52,12 +52,12 @@ export default {
                 </div>
             </div>
             
-            <div class="row row-col-3 d-flex flex-row justify-content-around bg-color">
-                <div class="col m-5 d-flex justify-content-center">
+            <div class="row row-col-3 d-flex flex-row bg-color">
+                <div class="col m-5 d-flex justify-content-start">
                  <button>SIGN-UP NOW!</button>
                 </div>
 
-                <div class="col d-flex justify-content-center align-items-center">
+                <div class="col d-flex justify-content-end align-items-center">
                     <h3>FOLLOW US</h3>
                     <div class="link">
                         <a href="#">

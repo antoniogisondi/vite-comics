@@ -116,8 +116,8 @@ export default {
                     <img src="../assets/img/jumbotron.jpg" alt="">
                 </div>
 
-                <div class="col bg-color">
-                    <div class="d-flex flex-row flex-wrap width mt-5">
+                <div class="col bg-color d-flex flex-column justify-content-center align-items-center">
+                    <div class="d-flex flex-row justify-content-center flex-wrap width mt-5">
                         <AppComicBook v-for="(item, index) in comic_book" :key="index"
                             :img="item.thumb"
                             :series="item.series"
@@ -181,8 +181,7 @@ export default {
     background-color: rgba(28, 28, 28, 255);
 
     .width {
-        width: calc(100% / 1.3);
-        margin: 0 auto;
+        width: calc(100% / 1.2);
     }
 
     .button {
@@ -195,16 +194,16 @@ export default {
     }
 
     .badge {
-        left: 12.5%;
+        left: 12%;
         top: -2%;
         position: absolute;
 
         span {
             color: white;
-            font-size: 20px;
+            font-size: 22px;
             background-color: rgba(2, 130, 249, 255);
             border: none;
-            padding: 10px 25px;
+            padding: 20px 35px;
         }
     }
 }
